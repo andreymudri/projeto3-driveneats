@@ -1,1 +1,42 @@
-.vazio {display:flex}
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+header{ 
+    max-width: 414px;
+    max-height: 92px;
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    margin:auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+h1 {
+    margin-left: 21px;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+}
+h2 {
+    margin-left: 21px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;    
+    color: #FFFFFF;
+}
+h3{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    color: #333333;
+    
+}
