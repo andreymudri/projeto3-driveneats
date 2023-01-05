@@ -15,7 +15,7 @@ function selecionarItem(categoria) {
          itens.forEach(item => {item.classList.remove('selected');});
          // marca o item clicado.
          this.classList.add('selected');
-         hold = this.querySelector('.preco').innerHTML.replace(',', '.');// ta retornando somente o valor numerico
+         hold = this.querySelector('.preco').innerHTML.replace("R$ ", "").replace(',', '.');// ta retornando somente o valor numerico
         // console.log(hold) 
          if (categoria === 'pratos') {
              precoPrato = Number(hold);
