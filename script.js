@@ -3,6 +3,9 @@ let precoPrato = 0;
 let precoBebida = 0;
 let precoDoce = 0;
 let valorfinal = 0;
+let nomeprato = "";
+let nomebebida = "";
+let nomedoce = "";
 function selecionarItem(categoria) {
      return function () {
          // se ja estiver marcado volta.
@@ -16,17 +19,21 @@ function selecionarItem(categoria) {
         // console.log(hold) 
          if (categoria === 'pratos') {
              precoPrato = Number(hold);
+             nomeprato = this.querySelector('.nome').innerHTML;
          }
          if (categoria === 'bebidas') {
-            precoBebida = Number(hold);
+             precoBebida = Number(hold);             
+             nomebebida = this.querySelector('.nome').innerHTML;
          }
          if (categoria === 'doces') {
-            precoDoce = Number(hold);
+             precoDoce = Number(hold);             
+             nomedoce = this.querySelector('.nome').innerHTML;
          }
          if (precoPrato !== 0 && precoBebida !== 0 && precoDoce !== 0) {
              valorPedido = (precoBebida + precoDoce + precoPrato);
 
              let fecharpedido = document.querySelector('.finalpedido').classList.add('fecharpedido');
+             document.querySelector('.fecharpedido').innerHTML = "Fechar pedido"; 
          }
      };
 }
@@ -54,10 +61,11 @@ function fazerpedido() {
     console.log(valorPedido);
     valorPedido = valorPedido.toFixed(2).toString().replace('.', ',');
     console.log(valorPedido);
+   let encrypted = encodeURIComponent(`
+    Olá, gostaria de fazer o pedido: \n    - Prato: ${nomeprato}  \n    - Bebida: ${nomebebida}  \n    - Sobremesa: ${nomedoce} \n    Total: R$ ${valorPedido} \n    
+    `);
+    window.open(`https://api.whatsapp.com/send?phone=5541997096000&text=${encrypted}`,"_blank");
 
 
-
-
-
-
+selecionarItem();
 }
