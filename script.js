@@ -33,7 +33,10 @@ function selecionarItem(categoria) {
              valorPedido = (precoBebida + precoDoce + precoPrato);
 
              let fecharpedido = document.querySelector('.finalpedido').classList.add('fecharpedido');
-             document.querySelector('.fecharpedido').innerHTML = "Fechar pedido"; 
+             document.querySelector('.fecharpedido').innerHTML = "Fechar pedido";
+             
+    valorPedido = Number(valorPedido);
+    valorPedido = valorPedido.toFixed(2).toString().replace('.', ',');
          }
      };
 }
@@ -57,14 +60,10 @@ doces.forEach(doce => {
 });
 //finalizar pedido
 function fazerpedido() {
-    valorPedido = Number(valorPedido);
-    console.log(valorPedido);
-    valorPedido = valorPedido.toFixed(2).toString().replace('.', ',');
-    console.log(valorPedido);
    let encrypted = encodeURIComponent(`
     Olá, gostaria de fazer o pedido: \n    - Prato: ${nomeprato}  \n    - Bebida: ${nomebebida}  \n    - Sobremesa: ${nomedoce} \n    Total: R$ ${valorPedido} \n    
     `);
-    window.open(`https://api.whatsapp.com/send?phone=5541997096000&text=${encrypted}`,"_blank");
+    window.open(`https://api.whatsapp.com/send?phone=5541111111111&text=${encrypted}`,"_blank");
 
 
 selecionarItem();
