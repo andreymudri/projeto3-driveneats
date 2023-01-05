@@ -36,7 +36,7 @@ function selecionarItem(categoria) {
              document.querySelector('.fecharpedido').innerHTML = "Fechar pedido";
              
     valorPedido = Number(valorPedido);
-    valorPedido = valorPedido.toFixed(2).toString().replace('.', ',');
+    valorPedido = valorPedido.toFixed(2).toString().replace("R$ ", "").replace('.', ',');
          }
      };
 }
