@@ -16,32 +16,38 @@
     <main>
 <h3>Primeiro, seu prato</h3>
 <div class="pratos">
-    <div class="caixa"><img src=".\srcs\frango_yin_yang.png"></div>
-    <div class="caixa"><img src=".\srcs\frango_yin_yang.png"></div>
-    <div class="caixa"><img src=".\srcs\frango_yin_yang.png"></div>
-    <div class="caixa"><img src=".\srcs\frango_yin_yang.png"></div>
-    <div class="caixa"><img src=".\srcs\frango_yin_yang.png"></div>
+    <div class="caixa" data-test="dish"><img src=".\srcs\frango_yin_yang.png">
+    <p class="preco">19,50</p></div>
+
+    <div class="caixa" data-test="dish"><img src=".\srcs\frango_yin_yang.png">    <p class="preco">11,50</p></div>
+
+    <div class="caixa" data-test="dish"><img src=".\srcs\frango_yin_yang.png">    <p class="preco">12,50</p></div>
+
+    <div class="caixa" data-test="dish"><img src=".\srcs\frango_yin_yang.png">    <p class="preco">15,50</p></div>
+
+    <div class="caixa" data-test="dish"><img src=".\srcs\frango_yin_yang.png">    <p class="preco">14,80</p></div>
+
 </div>
 
 <h3>Agora, sua bebida</h3>
-<div class="pratos">
-    <div class="caixa"><img src=".\srcs\coca-cola.png"></div>
-    <div class="caixa"><img src=".\srcs\coca-cola.png"></div>
-    <div class="caixa"><img src=".\srcs\coca-cola.png"></div>
-    <div class="caixa"><img src=".\srcs\coca-cola.png"></div>
-    <div class="caixa"><img src=".\srcs\coca-cola.png"></div>
+<div class="bebidas">
+    <div class="caixa" data-test="drink" ><img src=".\srcs\coca-cola.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="drink" ><img src=".\srcs\coca-cola.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="drink" ><img src=".\srcs\coca-cola.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="drink" ><img src=".\srcs\coca-cola.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="drink" ><img src=".\srcs\coca-cola.png"><p class="preco">11,50</p></div>
 </div>
 
 <h3>Por fim, sua sobremesa</h3>
-<div class="pratos">
-    <div class="caixa"><img src=".\srcs\pudim.png"></div>
-    <div class="caixa"><img src=".\srcs\pudim.png"></div>
-    <div class="caixa"><img src=".\srcs\pudim.png"></div>
-    <div class="caixa"><img src=".\srcs\pudim.png"></div>
-    <div class="caixa"><img src=".\srcs\pudim.png"></div>
+<div class="doces">
+    <div class="caixa" data-test="dessert" ><img src=".\srcs\pudim.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="dessert" ><img src=".\srcs\pudim.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="dessert" ><img src=".\srcs\pudim.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="dessert" ><img src=".\srcs\pudim.png"><p class="preco">11,50</p></div>
+    <div class="caixa" data-test="dessert" ><img src=".\srcs\pudim.png"><p class="preco">11,50</p></div>
 </div>
 
-<div class="finalpedido"><p>Selecione os 3 itens para fechar o pedido</p></div>
+<div class="finalpedido" data-test="order-btn" onclick="fazerpedido()"><p>Selecione os 3 itens para fechar o pedido</p></div>
     </main>
     <script src="script.js"></script>
 </body>
