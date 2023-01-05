@@ -60,9 +60,10 @@ doces.forEach(doce => {
 });
 //finalizar pedido
 function fazerpedido() {
-   let encrypted = encodeURIComponent(`
-    Olá, gostaria de fazer o pedido: \n    - Prato: ${nomeprato}  \n    - Bebida: ${nomebebida}  \n    - Sobremesa: ${nomedoce} \n    Total: R$ ${valorPedido} \n    
-    `);
+    if (precoPrato == 0 && precoBebida == 0 && precoDoce == 0) {
+        return;
+    }
+   let encrypted = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n    - Prato: ${nomeprato}  \n    - Bebida: ${nomebebida}  \n    - Sobremesa: ${nomedoce} \n    Total: R$ ${valorPedido} \n`);
     window.open(`https://api.whatsapp.com/send?phone=5541111111111&text=${encrypted}`,"_blank");
 
 

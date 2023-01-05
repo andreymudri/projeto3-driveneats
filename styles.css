@@ -55,6 +55,9 @@ h3:first-of-type {
     width: 414px; 
     overflow-x: scroll;   
 }
+.doces {
+    margin-bottom: 95px;
+}
 .caixa{
     height: 178px;
     width: 144px;
@@ -71,7 +74,8 @@ margin-left: 18px;
     position: fixed;
     bottom: 16px;
     left:25px;
-    width: 364px;
+    max-width: 364px;
+    width: 100vw;
     height: 61px;
     border-radius: 50px;
     background-color: #CBCBCB;
