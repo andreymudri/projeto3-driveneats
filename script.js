@@ -35,7 +35,7 @@ function selecionarItem(categoria) {
 
              let fecharpedido = document.querySelector('.finalpedido').classList.add('fecharpedido');
              document.querySelector('.fecharpedido').innerHTML = "Fechar pedido";
-             document.querySelector('.fecharpedido').disabled = false;
+             document.querySelector('.fecharpedido').removeAttribute('disabled');
              
     valorPedido = Number(valorPedido);
     valorPedido = valorPedido.toFixed(2).toString().replace("R$ ", "").replace('.', ',');
