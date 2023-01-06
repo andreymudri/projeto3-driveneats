@@ -5,10 +5,12 @@
     display:none;
     position: relative;
     left: 125px;
-    bottom: 15px;
+    bottom: 0px;
 }
-
-
+main,
+body {
+    background-color: #E5e5e5;
+}
 header{ 
     width: 414px;
     height: 92px;
@@ -64,12 +66,21 @@ h3:first-of-type {
 .doces {
     margin-bottom: 95px;
 }
+img{
+    height: 87px;
+    width: 144px;
+}
 .caixa{
+    height: 175px;
     width: 144px;
     border-radius: 9px;
     padding: 14px;
     margin-right: 16px;   
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);   
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+
+    align-items: center;
+
+      
 }
 .caixa:first-of-type{
 margin-left: 18px;
@@ -85,8 +96,9 @@ margin-left: 18px;
     border-radius: 50px;
     background-color: #CBCBCB;
     display:flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 p {    
     font-family: 'Roboto';
@@ -149,3 +161,8 @@ color: #FFFFFF;
 .fecharpedido:active {
     transform: scale(0.9);
 }
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
