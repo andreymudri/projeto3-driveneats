@@ -24,7 +24,7 @@ header{
 }
 h1 {
     margin-left: 21px;
-    font-family: 'Righteous', Arial, sans-serif;;
+    font-family: 'Righteous', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 44px;
@@ -34,7 +34,7 @@ h1 {
 }
 h2 {
     margin-left: 21px;
-    font-family: 'Roboto', Arial, sans-serif;;
+    font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -44,7 +44,7 @@ h2 {
 h3{    
     margin-top: 27px;
     margin-left: 17px;
-    font-family: 'Righteous', Arial, sans-serif;;
+    font-family: 'Righteous', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -101,7 +101,7 @@ margin-left: 18px;
     align-items: center;
 }
 p {    
-    font-family: 'Roboto', Arial, sans-serif;;
+    font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -111,7 +111,7 @@ p {
     color: #FFFFFF;
 }
 h4 {    
-    font-family: 'Roboto', Arial, sans-serif;;
+    font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -119,7 +119,7 @@ h4 {
     color: #333333;
 }
 h5 {
-    font-family: 'Roboto', Arial, sans-serif;;
+    font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -129,7 +129,7 @@ h5 {
     margin-bottom: 10px;  
 }
 .preco {
-    font-family: 'Roboto';
+    font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -147,7 +147,7 @@ color: #000000;
 }
 .fecharpedido{    
 background: #32B72F;
-font-family: 'Roboto', Arial, sans-serif;;
+font-family: 'Roboto', Arial, sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
