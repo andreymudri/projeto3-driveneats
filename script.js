@@ -2,21 +2,20 @@ let valorPedido = 0;
 let precoPrato = 0;
 let precoBebida = 0;
 let precoDoce = 0;
-let valorfinal = 0;
 let nomeprato = "";
 let nomebebida = "";
 let nomedoce = "";
 function selecionarItem(categoria) {
      return function () {
          // se ja estiver marcado volta.
-         if (this.classList.contains('selected')) return;
+         if (this.classList.contains('selected')) { return; }
          // desmarcar itens
          const itens = document.querySelectorAll(`.${categoria} .caixa.selected`);
          itens.forEach(item => {item.classList.remove('selected');});
          // marca o item clicado.
          this.classList.add('selected');
          this.querySelector("ion-icon").classList.add('selected');
-         hold = this.querySelector('.preco').innerHTML.replace("R$ ", "").replace(',', '.');// ta retornando somente o valor numerico
+         const hold = this.querySelector('.preco').innerHTML.replace("R$ ", "").replace(',', '.');// ta retornando somente o valor numerico
         // console.log(hold) 
          if (categoria === 'pratos') {
              precoPrato = Number(hold);
@@ -33,7 +32,7 @@ function selecionarItem(categoria) {
          if (precoPrato !== 0 && precoBebida !== 0 && precoDoce !== 0) {
              valorPedido = (precoBebida + precoDoce + precoPrato);
 
-             let fecharpedido = document.querySelector('.finalpedido').classList.add('fecharpedido');
+             const fecharpedido = document.querySelector('.finalpedido').classList.add('fecharpedido');
              document.querySelector('.fecharpedido').innerHTML = "Fechar pedido";
              document.querySelector('.fecharpedido').removeAttribute('disabled');
              
@@ -65,7 +64,7 @@ function fazerpedido() {
     if (precoPrato == 0 && precoBebida == 0 && precoDoce == 0) {
         return;
     }
-   let encrypted = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n    - Prato: ${nomeprato}  \n    - Bebida: ${nomebebida}  \n    - Sobremesa: ${nomedoce} \n    Total: R$ ${valorPedido} \n`);
+   const encrypted = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n    - Prato: ${nomeprato}  \n    - Bebida: ${nomebebida}  \n    - Sobremesa: ${nomedoce} \n    Total: R$ ${valorPedido} \n`);
     window.open(`https://api.whatsapp.com/send?phone=5541111111111&text=${encrypted}`,"_blank");
 
 
